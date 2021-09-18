@@ -86,7 +86,7 @@ public class EventHandler implements RequestHandler<ScheduledEvent, String> {
         // Before we delete the shipment updates make sure the summary update file exists
         if (EventHandler.getS3Client().doesObjectExist(Constants.SUMMARY_BUCKET, summaryUpdateName)) {
             deleteProcessedFiles(filesToDelete);
-            logger.log("All updates successfully processed");
+            logger.log("All updates successfully processed!!!!!!");
         } else {
             throw new RuntimeException("Failed to write summary status, will be retried in 15 minutes");
         }
